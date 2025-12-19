@@ -1,0 +1,10 @@
+{
+  "name": "Basic successful packet delivery",
+  "packet": {
+    "sourceIP": "192.168.1.10",
+    "destinationHostname": "example.com",
+    "protocol": "TCP",
+    "destinationPort": 80,
+    "ttl": 3
+  }
+}

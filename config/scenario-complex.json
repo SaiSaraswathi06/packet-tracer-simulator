@@ -1,0 +1,25 @@
+{
+  "name": "Firewall block and TTL expiry",
+  "tests": [
+    {
+      "description": "Firewall blocks SSH",
+      "packet": {
+        "sourceIP": "192.168.1.10",
+        "destinationHostname": "example.com",
+        "protocol": "TCP",
+        "destinationPort": 22,
+        "ttl": 3
+      }
+    },
+    {
+      "description": "TTL expired before delivery",
+      "packet": {
+        "sourceIP": "192.168.1.10",
+        "destinationHostname": "example.com",
+        "protocol": "TCP",
+        "destinationPort": 80,
+        "ttl": 0
+      }
+    }
+  ]
+}
