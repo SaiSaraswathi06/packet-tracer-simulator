@@ -1,0 +1,17 @@
+[
+  {
+    "action": "deny",
+    "protocol": "TCP",
+    "port": 22
+  },
+  {
+    "action": "allow",
+    "protocol": "TCP",
+    "port": 80
+  },
+  {
+    "action": "allow",
+    "protocol": "UDP",
+    "port": 53
+  }
+]
