@@ -128,6 +128,42 @@ Firewall block handling
 
 No route to host error
 
+
+### Failed / Blocked Request Example (Firewall Block)
+
+#### Request
+```json
+{
+  "sourceIP": "192.168.1.10",
+  "destinationHostname": "example.com",
+  "protocol": "TCP",
+  "destinationPort": 22,
+  "ttl": 3
+}
+
+Response
+{
+  "trace": [
+    {
+      "component": "DNS Resolver",
+      "action": "Resolved example.com to 93.184.216.34"
+    },
+    {
+      "component": "Router",
+      "action": "TTL decremented",
+      "ttl": 2
+    },
+    {
+      "component": "Router",
+      "action": "Forwarded via gateway"
+    },
+    {
+      "component": "Firewall",
+      "action": "Packet blocked by firewall"
+    }
+  ]
+}
+
 👩‍💻 Author
 
 Sai Saraswathi Ganja
